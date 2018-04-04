@@ -1,0 +1,6 @@
+# dependencies
+node_modules/
+
+# intellij related files
+.idea/
+my-graphql.iml
