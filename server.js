@@ -61,7 +61,13 @@ var root = {
   },
 };
 
+function loggingMiddleware(req, res, next) {
+  console.log('ip:', req.ip);
+  next();
+}
+
 var app = express();
+app.use(loggingMiddleware);
 app.use('/graphql', graphqlHTTP({
   schema: schema,
   rootValue: root,
